@@ -1,15 +1,6 @@
-* {
-  box-sizing: border-box;
-  font-family: Arial;
-  
 
-}
-
-.profile-card {
-  
-}
-
-/*.mark1 {
+/*==== HELPER COLORS FO LAYOUT
+.mark1 {
   background-color: hsla(0,100%,50%,.5);
 }
 .mark2 {
@@ -47,19 +38,65 @@
 }
 .mark13 {
   background-color: hsla(200,100%,80%,.5);
-} */
+} ====*/
+
+* {
+  box-sizing: border-box;  
+}
 
 body {
   background: url('assets/h%C3%A1tt%C3%A9rk%C3%A9p2.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-blend-mode: soft-light;
+  
 }
 
 .profile-card {
-  height: 100%;
-  width: 100%;
-  position:relative;
+  font-family: 'Quattrocento', serif;
   
+}
+
+/*==== COLORS ====*/
+
+ .profile-card {
+  background-color: hsla(0,0%,0%,.6);
+}
+
+h1, h2, h3, p {
+  color: aliceblue;
+}
+
+.icon {
+  color: burlywood;
+}
+
+/*=== FONT-SIZES ETC. ===*/
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size:1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+/*==== lAYOUT ====*/
+
+.profile-card {
+  height: 320%;
+  width: 100%;
+  position:absolute;
 }
 
 .lang-selector {
@@ -69,11 +106,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsla(0,0%,100%,.4);
-}
-
-.items, .portrait, .visit-me {
-  color: black;
 }
 
 .items {
@@ -81,7 +113,6 @@ body {
   height: 30vh;  
   position:absolute;
   top: 10vh;
-  background-color: hsla(0,0%,100%,.4);
 }
 
 .portrait {
@@ -92,7 +123,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsla(0,0%,100%,.4);
 }
 
 .photo {
@@ -109,8 +139,10 @@ body {
   position:absolute;
   padding-bottom: 5vh;
   top: 80vh;
-  background-color: hsla(0,0%,100%,.4);
+  margin-bottom: 10vh;
 }
+
+
 
 .jdi {
   position:absolute;
@@ -119,16 +151,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .social {
   position:absolute;
   top: 50%;
   width: 100%;
-  height: 10vh;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 
@@ -172,6 +206,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .mail {
@@ -183,6 +218,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .about-me {
@@ -190,7 +226,7 @@ body {
   width:100%;
   height:100vh;
   top: 100vh;
-  background-color: hsla(0,0%,100%,.4);
+  margin-bottom: 10vh;
 }
 
 .am1 {
@@ -225,6 +261,8 @@ body {
   justify-content: center;
   margin: 0 10%;
   top: 10%;
+  letter-spacing: 1px;
+  font-weight: 200;
 }
 
 .images {
@@ -236,7 +274,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: hsla(0,0%,100%,.4);
 }
 
 .impic {
@@ -250,24 +287,6 @@ body {
   border-color: ivory;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-h3 {
-  font-size:1.5rem;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1.4rem;
-}
-
 ul {
   list-style-type: none;
 }
@@ -277,14 +296,21 @@ li {
   margin: 0 5vw;
 }
 
-.icon {
-  color:blueviolet;
+/*==== VERTICAL RHYTHM ====*/
+
+.about-me {
+  top: 110vh;
 }
+
+.images {
+  top: 220vh;
+}
+
+/*==== HOVER ====*/
 
 .icon:hover {
   color:red;
-  transform: scale(1.5);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .photo:hover, .impic:hover {
@@ -292,11 +318,27 @@ li {
   transition: all 0.5s ease-in-out;
 }
 
+/*==== MEDIA QUERY ====*/
+
+@media only screen and (max-width: 370px) {
+  
+  p {
+    font-size: 1rem;
+  }
+  }
+@media only screen and (max-height: 370px) {
+  
+  p {
+    font-size: 1rem;
+  }
+  }
+
+
 @media only screen and (min-width: 565px) {
   
   .items {
     right: 0;
-    width: 50vw;
+    width: 50%;
     height: 70vh;
   }
   
@@ -304,38 +346,54 @@ li {
     right: 0;
     top: 80vh;
     height: 20vh;
-    width: 50vw;
+    width: 50%;
     margin: 0;
   }
   
   .portrait {
     left: 0;
     top: 10vh;
-    width: 50vw;
+    width: 50%;
     height: 90vh;
   }
 }
 
-@media only screen and (min-width: 800px) and (min-height: 650px) {
-
+@media only screen and (min-width: 900px) {
   .items {
-    right: 0;
-    width: 50%;
-    height: 25vh;
+    right: 30%;
+    width: 40%;
+    height: 40vh;
+    padding-bottom: 10vh;
+  }
+  
+  .home, .phone, .mail {
+    height: 10%;
+  }
+  
+  .home {
+    top: 55%;
+  }
+  
+  .phone {
+    top: 65%;
+  }
+  
+  .mail {
+    top: 75%;
   }
     
   .visit-me {
     right: 0;
-    top: 35vh;
-    height: 15vh;
-    width: 50%;
+    top: 15vh;
+    height: 15;
+    width: 30%;
     margin: 0;
   }
   
   .portrait {
     left: 0;
     top: 10vh;
-    width: 50%;
+    width: 30%;
     height: 40vh;
   }
     
@@ -346,8 +404,7 @@ li {
     }
   
   .am1p, .am2p {
-    letter-spacing: 1px;
-    font-weight: 200;
+    
     width: 60%;
     height: 100%;
     margin: 0 20%;
@@ -357,10 +414,33 @@ li {
   .images {
     top: 100vh;
   }
-  }
 
-@media only screen and (max-height: 375px) {
+  
+  .profile-card {
+    height: 210%;
+  }
+  
   p {
     font-size: 1rem;
   }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem
+  }
+  
+  h3 {
+    font-size: .6rem;
+  }
+  
+  li {
+    margin: 0 2vw;
+  }
+  
+  .li-img {
+    margin: 3vh 10vw;   
+}
 }
